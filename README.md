@@ -137,5 +137,5 @@ Diese Codes sind nicht wichtig für den betreib des programmes sind aber in dies
 
 # 7. Ergebnisse
 
-Die Ergebnisse die ich erziehlt habe mit dem betrieb dieses von mir erstellten Git-Repository sind im ordner `results` die fertig visualisierten Bilder )Pose mit Bounding Box) sind in `results/pose`.
+Die Ergebnisse die ich erziehlt habe mit dem betrieb dieses von mir erstellten Git-Repository sind im ordner `results` die fertig visualisierten Bilder (Pose mit Bounding Box) sind in `results/pose`.
 
