@@ -1,0 +1,3 @@
+[submodule "megapose6d"]
+	path = megapose6d
+	url = https://github.com/megapose6d/megapose6d

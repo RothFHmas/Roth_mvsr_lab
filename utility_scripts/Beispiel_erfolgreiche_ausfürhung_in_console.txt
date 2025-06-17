@@ -1,0 +1,634 @@
+(megapose) christoph@christoph-System-Product-Name:~/mvsr$ python main.py 
+Starte: python generate_bboxes_with_yolo.py
+
+image 1/1 /home/christoph/mvsr/data/rgb/0.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 51.7ms
+Speed: 1.9ms preprocess, 51.7ms inference, 154.8ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/1.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 7.3ms
+Speed: 0.9ms preprocess, 7.3ms inference, 1.1ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/2.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 6.6ms
+Speed: 0.6ms preprocess, 6.6ms inference, 0.6ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/3.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 7.3ms
+Speed: 1.2ms preprocess, 7.3ms inference, 0.6ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/4.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 6.9ms
+Speed: 0.6ms preprocess, 6.9ms inference, 0.6ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/5.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 6.4ms
+Speed: 0.7ms preprocess, 6.4ms inference, 0.6ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/6.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 6.4ms
+Speed: 0.8ms preprocess, 6.4ms inference, 0.9ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/7.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 6.4ms
+Speed: 0.6ms preprocess, 6.4ms inference, 0.6ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/8.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 6.4ms
+Speed: 0.6ms preprocess, 6.4ms inference, 0.6ms postprocess per image at shape (1, 3, 480, 640)
+
+image 1/1 /home/christoph/mvsr/data/rgb/9.png: 480x640 1 1A_gray, 2 1A_yellows, 2 1B_yellows, 1 3B_gray, 7.0ms
+Speed: 0.8ms preprocess, 7.0ms inference, 0.6ms postprocess per image at shape (1, 3, 480, 640)
+[INFO] Bounding boxes im gewünschten Format gespeichert.
+Befehl abgeschlossen.
+
+ Verarbeitung Bild 0
+==============================
+data/rgb/0.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/0.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/0.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:03.211766 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.173682 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:Known pipe types:
+
+    glxGraphicsPipeglxGraphicsPipe
+
+((11 aux display modules not yet loaded.)
+ aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:01.244270 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.785412 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.541612 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/0_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/0_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/0_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/0_poses.json
+data/yolo_detections/0_detected.png -> results/visualizations/detections/yolo/0_detections_yolo.png
+
+ Verarbeitung Bild 1
+==============================
+data/rgb/1.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/1.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/1.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.277935 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.159726 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.796370 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.390548 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.542939 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/1_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/1_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/1_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/1_poses.json
+data/yolo_detections/1_detected.png -> results/visualizations/detections/yolo/1_detections_yolo.png
+
+ Verarbeitung Bild 2
+==============================
+data/rgb/2.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/2.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/2.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.257956 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.155898 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.836541 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.444583 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.568467 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/2_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/2_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/2_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/2_poses.json
+data/yolo_detections/2_detected.png -> results/visualizations/detections/yolo/2_detections_yolo.png
+
+ Verarbeitung Bild 3
+==============================
+data/rgb/3.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/3.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/3.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.295274 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.161447 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.806543 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.223875 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.654537 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/3_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/3_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/3_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/3_poses.json
+data/yolo_detections/3_detected.png -> results/visualizations/detections/yolo/3_detections_yolo.png
+
+ Verarbeitung Bild 4
+==============================
+data/rgb/4.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/4.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/4.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.425569 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.170130 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.823731 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.197740 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.611495 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/4_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/4_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/4_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/4_poses.json
+data/yolo_detections/4_detected.png -> results/visualizations/detections/yolo/4_detections_yolo.png
+
+ Verarbeitung Bild 5
+==============================
+data/rgb/5.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/5.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/5.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.267173 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.157984 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.937091 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.528630 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.629751 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/5_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/5_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/5_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/5_poses.json
+data/yolo_detections/5_detected.png -> results/visualizations/detections/yolo/5_detections_yolo.png
+
+ Verarbeitung Bild 6
+==============================
+data/rgb/6.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/6.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/6.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:03.491924 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.162321 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.865177 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.722429 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:05.430110 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/6_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/6_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/6_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/6_poses.json
+data/yolo_detections/6_detected.png -> results/visualizations/detections/yolo/6_detections_yolo.png
+
+ Verarbeitung Bild 7
+==============================
+data/rgb/7.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/7.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/7.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.367095 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.173529 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.892756 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.421152 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.578412 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/7_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/7_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/7_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/7_poses.json
+data/yolo_detections/7_detected.png -> results/visualizations/detections/yolo/7_detections_yolo.png
+
+ Verarbeitung Bild 8
+==============================
+data/rgb/8.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/8.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/8.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.362139 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.190114 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.971139 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.845896 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.616790 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/8_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/8_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/8_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/8_poses.json
+data/yolo_detections/8_detected.png -> results/visualizations/detections/yolo/8_detections_yolo.png
+
+ Verarbeitung Bild 9
+==============================
+data/rgb/9.png -> megapose6d/local_data/examples/morobot/image_rgb.png
+data/depth/9.png -> megapose6d/local_data/examples/morobot/image_depth.png
+data/yolo_detections/9.json -> megapose6d/local_data/examples/morobot/inputs/object_data.json
+data/camera_data.json -> megapose6d/local_data/examples/morobot/camera_data.json
+Zielordner 'megapose6d/local_data/examples/morobot/meshes' bereits vorhanden → wurde ersetzt.
+Ordner kopiert: data/morobot/meshes → megapose6d/local_data/examples/morobot/meshes
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-detections
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+0:00:02.326916 - Wrote detections visualization: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations/detections.png
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --run-inference
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+INFO:__main__:Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+0:00:00.171500 - Loading model megapose-1.0-RGB-multi-hypothesis-icp.
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Running inference.
+0:00:00.887066 - Running inference.
+INFO:__main__:Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+0:00:23.844560 - Wrote predictions: /home/christoph/mvsr/megapose6d/local_data/examples/morobot/outputs/object_data.json
+Befehl abgeschlossen.
+Starte: python -m megapose.scripts.run_inference_on_example morobot --vis-outputs
+MKL_NUM_THREADS: 1
+OMP_NUM_THREADS: 1
+CUDA_VISIBLE_DEVICES: 0
+EGL_VISIBLE_DEVICES: 0
+Known pipe types:
+  glxGraphicsPipe
+(1 aux display modules not yet loaded.)
+INFO:__main__:Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+0:00:04.655148 - Wrote visualizations to /home/christoph/mvsr/megapose6d/local_data/examples/morobot/visualizations.
+Befehl abgeschlossen.
+Starte: python draw_pose.py
+Visualisierung gespeichert unter: megapose6d/local_data/examples/morobot/visualizations/all_poses.png
+Befehl abgeschlossen.
+megapose6d/local_data/examples/morobot/visualizations/all_poses.png -> results/visualizations/9_poses.png
+megapose6d/local_data/examples/morobot/visualizations/all_results.png -> results/visualizations/megapose/9_all_results.png
+megapose6d/local_data/examples/morobot/visualizations/detections.png -> results/visualizations/detections/megapose/9_detections_megapose.png
+megapose6d/local_data/examples/morobot/outputs/object_data.json -> results/pose/9_poses.json
+data/yolo_detections/9_detected.png -> results/visualizations/detections/yolo/9_detections_yolo.png
