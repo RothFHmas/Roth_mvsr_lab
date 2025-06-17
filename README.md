@@ -39,7 +39,6 @@ cd mvsr_lab_roth
 cd megapose6d
 conda env create -f conda/environment_full.yaml
 conda activate megapose
-cd megapose6d
 pip install -e .
 cd ..
 ```
