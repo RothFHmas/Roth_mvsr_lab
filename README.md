@@ -23,7 +23,7 @@ git clone https://github.com/RothFHmas/Roth_mvsr_lab.git
 Ich habe es nicht geschafft, wegen mangelnder Git-Erfahrung das Megapose-Submodule richtig einzurichten.
 Deswegen bitte Megapose noch einmal extra clonen:
 ```bash
-cd mvsr_lab_roth/
+cd Roth_mvsr_lab/
 git clone https://github.com/megapose6d/megapose6d.git
 ```
 
