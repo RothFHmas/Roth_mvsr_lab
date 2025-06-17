@@ -1,4 +1,4 @@
-# mvsr_lab_Roth
+# Roth_mvsr_lab
 
 In diesem Projekt wird mithilfe von **YOLOv11-s** und **Megapose6D** eine **6D-Pose-Estimation** durchgeführt.
 
