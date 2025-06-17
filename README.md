@@ -12,6 +12,8 @@ OS:  Ubuntu 20.04.6 LTS x86_64 (nativ installiert)<br>
 GPU: NVIDIA GeForce RTX 3050  (CUDA Version `CUDA Version: 12.8` (entnommen aus `nvidia-smi`))<br>
 CPU: AMD Ryzen 5 5600X (12) @ 3.700GHz<br>
 
+Ich verwende hier miniconda (conda 25.5.1)
+
 ## 1. Git-Repository klonen
 Zu erst mein Git-Repository klonen.
 ```bash
@@ -26,9 +28,14 @@ git clone https://github.com/megapose6d/megapose6d.git
 
 ## 2. Conda Environment erstellen
 Ich habe zunächst das Conda-Environment erstellt, in dem das Pose-Estimation-Programm läuft.  
-Hierfür habe ich der Anleitung des Megapose6D-Git-Repositories gefolgt.
+Hierfür habe ich der Anleitung des Megapose6D-Git-Repositories gefolgt. Doch zuvor das Setup ausführen:
+```bash
+python setup.py
+```
+Das setup ersetzt im megapose Git-Repository die benötigten datein mit bearbeiteten versionen aus dem ordner utility_scrips. Ich verwende hier miniconda (conda 25.5.1)
 ```bash
 cd mvsr_lab_roth
+cd megapose6d
 conda env create -f conda/environment_full.yaml
 conda activate megapose
 cd megapose6d
@@ -36,12 +43,14 @@ pip install -e .
 cd ..
 ```
 
-## 2.1 (optional) 
+## 2.1 (optional) Requirements
 Ich musste anschließend die für mich passende Torch-Version installieren.
 ```bash
 pip uninstall torch torchvision torchaudio
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
+Außerdem habe ich vorher grafik treiber updates gemacht weiß nciht ob das einen einflauss hat.
+Das system ist komplett neu aufgesetzt, wenn irgendwelche requirements fehlen weiß ich nciht warum da ich hier paralel mitgeschrieben habe was ich gemacht habe.
 
 ## 3. Ultralytics installieren
 Als Nächstes habe ich Ultralytics installiert, um das trainierte YOLO-Modell zu verwenden  
@@ -50,7 +59,7 @@ Als Nächstes habe ich Ultralytics installiert, um das trainierte YOLO-Modell zu
 pip install ultralytics
 ```
 
-## 4. Beispieldaten herunterladen
+## 4. Beispieldaten herunterladen und setup ausführen
 Ich habe das vortrainierte Modell von Megapose6D heruntergeladen:
 ```bash
 cd megapose6d
@@ -63,6 +72,7 @@ cd megapose6d
 python -m megapose.scripts.download --example_data
 cd ..
 ```
+
 
 ## 5. Hauptprogramm starten
 Starten des Hauptprogramm
