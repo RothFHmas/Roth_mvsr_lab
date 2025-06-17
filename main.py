@@ -40,7 +40,7 @@ for i in range(10):
     kopiere_und_umbenennen(f"data/yolo_detections/{nummer}.json",  "megapose6d/local_data/examples/morobot/inputs", "object_data.json")
     kopiere_und_umbenennen("data/camera_data.json",  "megapose6d/local_data/examples/morobot", "camera_data.json")
 
-    ordner_kopieren("data/morobot/meshes", "megapose6d/local_data/examples/morobot/meshes")
+    ordner_kopieren("data/morobot/morobot/meshes", "megapose6d/local_data/examples/morobot/meshes")
 
     # === Schritt 2: Megapose-Befehle ===
     befehle = [

@@ -13,6 +13,7 @@ GPU: NVIDIA GeForce RTX 3050  (CUDA Version `CUDA Version: 12.8` (entnommen aus 
 CPU: AMD Ryzen 5 5600X (12) @ 3.700GHz<br>
 
 Ich verwende hier miniconda (conda 25.5.1)
+Das system ist komplett neu aufgesetzt, wenn irgendwelche requirements fehlen weiß ich nicht warum da ich hier paralel mitgeschrieben habe was ich gemacht habe. unter `utility_scrips` ist eine `Beispiel_erfolgreiche_ausfürhung_in_console.txt` dort wurde einal die komplette konsolen ausgabe hin kopiert für die erfolgreiche ausführung von `main.py`.
 
 ## 1. Git-Repository klonen
 Zu erst mein Git-Repository klonen.
@@ -32,7 +33,7 @@ Hierfür habe ich der Anleitung des Megapose6D-Git-Repositories gefolgt. Doch zu
 ```bash
 python setup.py
 ```
-Das setup ersetzt im megapose Git-Repository die benötigten datein mit bearbeiteten versionen aus dem ordner utility_scrips. Ich verwende hier miniconda (conda 25.5.1)
+Das setup ersetzt im megapose Git-Repository die benötigten datein mit bearbeiteten versionen aus dem ordner utility_scrips. In der enviroment_full.yaml wir nur die notebook version auf 6.4.12 gesetzt, und in der run on exampel wird nur das -icp ergänzt um rgbd daten zu verwenden. Ich verwende hier miniconda (conda 25.5.1).
 ```bash
 cd mvsr_lab_roth
 cd megapose6d
@@ -43,23 +44,28 @@ pip install -e .
 cd ..
 ```
 
-## 2.1 (optional) Requirements
+## 2.1 Requirements
 Ich musste anschließend die für mich passende Torch-Version installieren.
 ```bash
 pip uninstall torch torchvision torchaudio
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 Außerdem habe ich vorher grafik treiber updates gemacht weiß nciht ob das einen einflauss hat.
-Das system ist komplett neu aufgesetzt, wenn irgendwelche requirements fehlen weiß ich nciht warum da ich hier paralel mitgeschrieben habe was ich gemacht habe.
 
-## 3. Ultralytics installieren
+Außerdem muss dises bop_toolkit installiert werden falls der error erschint.
+```bash
+pip install git+https://github.com/thodan/bop_toolkit.git
+```
+
+
+## 2.2 Ultralytics installieren
 Als Nächstes habe ich Ultralytics installiert, um das trainierte YOLO-Modell zu verwenden  
 (darauf wird später eingegangen).
 ```bash
 pip install ultralytics
 ```
 
-## 4. Beispieldaten herunterladen und setup ausführen
+## 3. Beispieldaten herunterladen und setup ausführen
 Ich habe das vortrainierte Modell von Megapose6D heruntergeladen:
 ```bash
 cd megapose6d
@@ -74,7 +80,7 @@ cd ..
 ```
 
 
-## 5. Hauptprogramm starten
+## 4. Hauptprogramm starten
 Starten des Hauptprogramm
 ```bash
 python main.py
@@ -104,7 +110,7 @@ Die ersten drei Befehle sind die Example-Programme aus Megapose6D, um
 Danach habe ich im Hauptprogramm alle Ergebnisse in den Ordner `results/` kopiert, entsprechend umbenannt und in Ordner einsortiert.  
 Sobald dies geschehen war, war der Durchlauf für das erste Bild abgeschlossen (`0.png`) und dieser Ablauf wiederholte sich in einem `for`-Loop für alle Bilder (`0.png` bis `9.png`) aus der MOODLE-Angabe.
 
-# YOLO-Modell trainieren
+# 5. YOLO-Modell trainieren
 
 Das YOLO-Modell habe ich nach der Anleitung aus diesem YouTube-Video trainiert: https://youtu.be/r0RspiLG260  
 In diesem wird sehr gut das Labeln von Daten erklärt und wie das Dataset zum Trainieren auszusehen hat.
@@ -124,13 +130,13 @@ Dies geschieht in diesem Code:
 ```bash
 python generate_bboxes_with_yolo.py
 ```
-# Utility Scrips
+# 6. Utility Scrips
 
 Im ordner `utility_scripts` vefinden sich 2 python scripte<br> das 1. ist dazu da aus den .ply datein der CAD-Modelle die größe der benötigten Bounding Box zu bestimmen.<br> das 2. ist dazu da gewesen testwiese eine pose und Bounding Box für die beispieldaten aus Megapose6d zu erstellen.
 
 Diese Codes sind nicht wichtig für den betreib des programmes sind aber in diesem Git-Repository der vollständigkeit wegen.
 
-# Ergebnisse
+# 7. Ergebnisse
 
 Die Ergebnisse die ich erziehlt habe mit dem betrieb dieses von mir erstellten Git-Repository sind im ordner `results` die fertig visualisierten Bilder )Pose mit Bounding Box) sind in `results/pose`.
 
