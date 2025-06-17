@@ -131,7 +131,7 @@ python generate_bboxes_with_yolo.py
 ```
 # 6. Utility Scrips
 
-Im ordner `utility_scripts` vefinden sich 2 python scripte<br> das 1. ist dazu da aus den .ply datein der CAD-Modelle die größe der benötigten Bounding Box zu bestimmen.<br> das 2. ist dazu da gewesen testwiese eine pose und Bounding Box für die beispieldaten aus Megapose6d zu erstellen.
+Im ordner `utility_scripts` vefinden sich 2 python scripte<br> das 1. ist dazu da aus den .ply datein der CAD-Modelle die größe der benötigten Bounding Box zu bestimmen. Die CAD-Modelle wurden mithilfe von Blender von .obj zu .ply konvertiert.<br> das 2. ist dazu da gewesen testwiese eine pose und Bounding Box für die beispieldaten aus Megapose6d zu erstellen.
 
 Diese Codes sind nicht wichtig für den betreib des programmes sind aber in diesem Git-Repository der vollständigkeit wegen.
 
