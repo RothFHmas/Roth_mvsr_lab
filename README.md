@@ -49,7 +49,7 @@ Ich musste anschließend die für mich passende Torch-Version installieren.
 pip uninstall torch torchvision torchaudio
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
-Außerdem habe ich vorher grafik treiber updates gemacht weiß nciht ob das einen einflauss hat.
+Außerdem habe ich bevor ich angefangen habe vorher grafik treiber updates gemacht weiß nicht ob das einen einflauss hat.
 
 Außerdem muss dises bop_toolkit installiert werden falls der error erschint.
 ```bash
