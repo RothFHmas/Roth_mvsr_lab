@@ -117,7 +117,7 @@ In diesem wird sehr gut das Labeln von Daten erklärt und wie das Dataset zum Tr
 Die Labeldaten für das Dataset habe ich mit Roboflow erstellt: https://roboflow.com/  
 Hierbei habe ich lediglich Bounding-Boxen mit Klassenlabels auf den Bildern eingefügt.  
 Dabei möchte ich erwähnen, dass ich für das Training der Daten dankenswerterweise etwa 50 ungelabelte Bilder von Kollegen Karim El-Harery zur Verfügung gestellt bekommen habe.  
-Diese gelabelten Bilder habe ich dann anschließend in Roboflow noch augmentiert, um zusammen mit den in MOODLE zur Verfügung gestellten Bildern 183 Bilder für das Training des YOLO-Modells zu erhalten.
+Diese gelabelten Bilder habe ich dann anschließend in Roboflow noch augmentiert, um zusammen mit den in MOODLE zur Verfügung gestellten Bildern 183 Bilder für das Training des YOLO-Modells zu erhalten. Die trainings bilder sind NICHT in diesem Git Reposatory enthalten.
 
 Dieses Google Colab habe ich dann verwendet, um YOLO zu trainieren:  
 https://colab.research.google.com/github/EdjeElectronics/Train-and-Deploy-YOLO-Models/blob/main/Train_YOLO_Models.ipynb  
