@@ -20,6 +20,8 @@ Zu erst mein Git-Repository klonen.
 ```bash
 git clone https://github.com/RothFHmas/Roth_mvsr_lab.git
 ```
+CAD-Datein / Meshes der objeke sind aus Lizenzgründen nicht in diesem Git Repository enthalten!
+
 Ich habe es nicht geschafft, wegen mangelnder Git-Erfahrung das Megapose-Submodule richtig einzurichten.
 Deswegen bitte Megapose noch einmal extra clonen:
 ```bash
